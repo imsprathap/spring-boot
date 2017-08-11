@@ -1,0 +1,86 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# imsprathap
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Employee Collection [/employees]
+
+### List All Employeess [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "employeeId": "946",
+                "employeeName": "Prathap",
+                "skills": [
+                    {
+                        "skillId":1,
+                        "skill":"JAVA"
+                    }, {
+                        "skillId":1,
+                        "skill":"Spring"
+                    }, {
+                       "skillId":1,
+                        "skill":"Hibernate"
+                    }, {
+                        "skillId":1,
+                        "skill":"AngularJs"
+                    }
+                ]
+            }
+        ]
+
+### Create a New Question [POST]
+
++ Request (application/json)
+
+        {
+            "employeeId":"847"
+            "employeeName": "Preetham",
+            "skills": [
+                    {
+                        "skillId":1,
+                        "skill":"JAVA"
+                    }, {
+                        "skillId":1,
+                        "skill":"Spring"
+                    }, {
+                       "skillId":1,
+                        "skill":"Hibernate"
+                    }, {
+                        "skillId":1,
+                        "skill":"AngularJs"
+                    }
+                ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /employee/1
+
+    + Body
+
+            {
+                "employeeId": "946",
+                "employeeName": "Prathap",
+                "skills": [
+                    {
+                        "skillId":1,
+                        "skill":"JAVA"
+                    }, {
+                        "skillId":1,
+                        "skill":"Spring"
+                    }, {
+                       "skillId":1,
+                        "skill":"Hibernate"
+                    }, {
+                        "skillId":1,
+                        "skill":"AngularJs"
+                    }
+                ]
+            }
